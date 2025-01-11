@@ -1,0 +1,39 @@
+<!-- views/applications/new.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add a New Expense</title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Add a New Expense</h1>
+
+    <!-- views/applications/new.ejs -->
+
+    <form action="/users/<%= user._id %>/dashboard" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" required />
+  
+    <label for="description">Description:</label>
+    <textarea name="description" id="description"></textarea>
+  
+    <label for="amount">Amount:</label>
+    <input type="number" name="amount" id="amount" required/>
+  
+    
+    <label for="category">Category:</label>
+    <select id="category" name="category" required>
+      <option value="housing">Housing</option>
+      <option value="transportation">Transportation</option>
+      <option value="food">Food</option>
+      <option value="debt-payments">Debt Payments</option>
+    </select>
+
+    <button type="submit">Add Expense</button>
+  </form>
+  
+  </body>
+</html>
