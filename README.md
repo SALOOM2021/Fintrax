@@ -8,17 +8,14 @@
 ### Background Information
 Fintrax site was built to help individuals organize and manage their finances. The goal of this website was to create a site that can actually help individuals in their lifes by make the website intuitive and simple for tracking expenses. The website helps users visualize their financial health and make more informed decisions about their spending.
 
-## Getting Started:
-Check Fintrax Now! [Deployed App Link](http://link-to-your-deployed-app.com).
-
 ### Planning Materials:
 - [Project Plan](https://trello.com/b/6lvC0aGx/project-planning-fintrax)
 
 ## Attributions:
 - [GA lecture skyrockit](https://generalassembly.instructure.com/courses/676/pages/men-stack-embedding-related-data-skyrockit?module_item_id=56425) – for assestant in the project and for using it templetes as a start point.
-- [Flaticon](https://www.flaticon.com/) – for the icons used in the application.
-- [Google Fonts](https://fonts.google.com) – for the typography.
-- [W3school](https://fonts.google.com) – for the design.
+- [Flaticon](https://www.flaticon.com/) – For the icons used in the application.
+- [Google Fonts](https://fonts.google.com) – For the typography.
+- [W3school](https://fonts.google.com) – For the design.
 
 ## Technologies Used:
 - **JavaScript**: For handling the logic of adding, editing, and deleting expenses.
