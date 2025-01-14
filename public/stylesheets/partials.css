@@ -1,0 +1,39 @@
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding:10px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(13, 11, 66);
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-bottom: 90px;
+}
+  #nav-header {
+    color: white;
+    size: 1em ;
+    margin: 0;
+  }
+  
+  .authlink {
+    text-decoration: none;
+    margin: 0 15px;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .authlink:hover {
+   background-color: white;
+   color: rgb(13, 11, 66);
+   border-radius: 3px ;
+  }
+  .nav-links{
+    padding-right: 30px;
+  }
+  

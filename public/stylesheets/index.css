@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Doto:wght@100..900&family=Londrina+Shadow&family=Poiret+One&family=Signika:wght@300..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background: url("https://i.imgur.com/cwdC8en.png");
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    color: rgb(15, 17, 76);
+}
+.header{
+    margin-top: 110px;
+    margin-left: 70px;
+    font-size: 60px;
+}
+.subheader{
+    margin-left: 75px;
+    width: 700px;
+    font-size: 28px;
+    margin-top: 0;
+    text-align: justify;
+    color: black;
+    font-weight: 500;
+}
+.container{
+    margin-left: 1135px;
+    width: 150px;
+    height: 200px;
+    position: absolute;
+    margin-top: 360px;
+}
+
+.signup-link, .signin-link {
+    text-decoration: none;
+    font-size: 20px;
+    border: 3px solid rgb(15, 17, 76);
+    padding: 10px;
+    margin-top: 20px;  
+    color: rgb(15, 17, 76); 
+    display: block;  
+    text-align: center;  
+    border-radius: 10px;  
+    transition: background-color 0.3s ease;  
+    width: 90%;
+   
+   
+    
+}
+
+ .signin-link:hover{
+    background-color: rgb(15, 17, 76);
+    color: white; 
+    font-weight: 800;
+}
+.signin-link {
+    margin-top: 25px; 
+}
+.signup-link{
+    background-color: rgb(15, 17, 76);
+    color: white; 
+    margin-top:30px; 
+}
+.signup-link:hover{
+    background:none;
+    font-weight: 800;
+    color: rgb(15, 17, 76);
+    
+}
+
+.icons{
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-left: 80px;
+}
+img{
+    height:100px;
+    margin-left: 50px;
+}

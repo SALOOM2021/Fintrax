@@ -1,27 +1,38 @@
-<!-- views/applications/show.ejs -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/show.css" />
     <title><%= expense.name %></title>
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1><%= expense.name %></h1>
-    <% if (expense.description) { %>
-    <p>Description: <%= expense.description %></p>
-    <% } %>
-    <p>Amount: <%= expense.amount %> </p>
-    <p>Category: <%= expense.category %></p>
-
-    <a href="/users/<%= user._id %>/dashboard/my-expenses/<%= expense._id %>/edit">
-        Edit this application
-      </a>
-    <form
-      action="/users/<%= user._id %>/dashboard/my-expenses/<%= expense._id %>?_method=DELETE"
-      method="POST">
-      <button type="submit">Delete this application</button>
+  
+      <div class="container">
+        <div class="inner-container">
+          <h1 class="expense-name"><%= expense.name %></h1>       
+          <p><b>Expense Name: </b><%= expense.name %></p>
+          <hr>
+          <% if (expense.description) { %>
+          <p><b>Description:</b> <%= expense.description %></p>
+          <hr>
+          <% } %>
+          <p><b>Amount:</b> <%= expense.amount %> BHD </p>
+          <hr>
+          <p><b>Category:</b> <%= expense.category %></p>
+          <hr class="last-hr">
+          <div class="icons">
+          <a class="edit-link" href="/users/<%= user._id %>/dashboard/my-expenses/<%= expense._id %>/edit">
+            <img class="edit-icon" src="https://i.imgur.com/LXVYXiL.png" alt="edit icon">
+          </a>
+        <form
+          action="/users/<%= user._id %>/dashboard/my-expenses/<%= expense._id %>?_method=DELETE"
+          method="POST">
+          <button type="submit"><img class="delete-icon" src="https://i.imgur.com/IMvdbq7.png" alt="delete-icon"></button>
+        </form>
+        </div>
+        </div>
+      </div>
   </body>
 </html>

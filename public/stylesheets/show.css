@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Doto:wght@100..900&family=Londrina+Shadow&family=Poiret+One&family=Signika:wght@300..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background: url("https://i.imgur.com/cwdC8en.png");
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    color: rgb(15, 17, 76);
+    text-transform: capitalize;
+}
+.container{
+    width: 600px;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 240px;
+    margin-top: 150px;
+    padding-left: 15px;
+    border: 3px solid rgb(15, 17, 76);
+    height: 370px;
+}
+.expense-name{
+    text-transform: uppercase;
+    text-align: center;
+}
+.inner-container{
+    width: 80%;
+    margin: 0 auto;
+}
+hr{
+    border: 1px solid rgb(15, 17, 76);;
+}
+.last-hr{
+    border: 3px solid rgb(15, 17, 76);;
+}
+.edit-icon{
+    height: 30px;
+    
+}
+.delete-icon{
+    height: 30px;
+}
+button{
+    
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.icons{
+display: flex;
+justify-content:space-between;
+align-items: center;
+}
+.edit-link{
+    width: 100px;
+    
+    margin-left: 400px;
+}
+

@@ -1,17 +1,29 @@
-<!-- views/index.ejs -->
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fintrax</title>
-  </head>
-  <body>
-    <%- include('./partials/_navbar.ejs') %>
-    <h1>Fintrax</h1>
-    <p>Manage Your Expenses</p>
-    <a href="/auth/sign-up">Sign up</a>
-    <a href="/auth/sign-in">Sign in</a>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/stylesheets/index.css" />
+  <title>Fintrax</title>
+</head>
+
+<body>
+  <%- include('./partials/_navbar.ejs') %>
+    <h1 class="header">Fintrax</h1>
+    <p class="subheader">Take control of your Expenses with Fintrax easily track, manage, and organize your expenses in
+      one place. Sign up today and start budgeting smarter!</p>
+    </div>
+    <div class="icons">
+      <img src="https://i.imgur.com/gX2wC7F.png" alt="money bag icon">
+      <img src="https://i.imgur.com/MERABV4.png" alt="hand with coin icon">
+      <img src="https://i.imgur.com/huKDSPI.png" alt="coins icon">
+      <img src="https://i.imgur.com/NfkgZED.png" alt="wallet icon">
+    </div>
+    <div class="container">
+      <a class="signup-link" href="/auth/sign-up">Sign Up</a>
+      <a class="signin-link" href="/auth/sign-in">Sign In</a>
+    </div>
+</body>
+
 </html>

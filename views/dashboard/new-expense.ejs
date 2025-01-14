@@ -5,35 +5,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/new-expense.css" />
     <title>Add a New Expense</title>
   </head>
   <body>
-    <%- include('../partials/_navbar.ejs') %>
-    <h1>Add a New Expense</h1>
-
-    <!-- views/applications/new.ejs -->
-
-    <form action="/users/<%= user._id %>/dashboard" method="POST">
-    <label for="name">Name:</label>
-    <input type="text" name="name" id="name" required />
-  
-    <label for="description">Description:</label>
-    <textarea name="description" id="description"></textarea>
-  
-    <label for="amount">Amount:</label>
-    <input type="number" name="amount" id="amount" required/>
-  
-    
-    <label for="category">Category:</label>
-    <select id="category" name="category" required>
-      <option value="housing">Housing</option>
-      <option value="transportation">Transportation</option>
-      <option value="food">Food</option>
-      <option value="debt-payments">Debt Payments</option>
-    </select>
-
-    <button type="submit">Add Expense</button>
-  </form>
-  
+    <%- include('../partials/_navbar.ejs') %>   
+  <h1 class="header">Manage Your Life By Managing Your Expenses  </h1>
+  <div class="container">
+    <div class="img-container">
+      <div class="advice">
+        <p class="advice-paragraph">Your Expenses can be managed easily when you list them</p>
+      </div>
+    </div>
+    <div class="form-container">
+      <h1 class="h1-add-expense">Add New Expense</h1>
+      
+      <form action="/users/<%= user._id %>/dashboard" method="POST">
+        <input type="text" name="name" id="name" placeholder="Expense Name" required />
+        <br>
+        <textarea name="description" id="description" placeholder="Description (optional)" rows="3"></textarea>
+        <br>
+        <input type="number" name="amount" id="amount" placeholder="Amount per Month (BHD)" required/>
+        <br>
+        <select id="category" name="category" required>
+          <option value="" disabled selected hidden>Select a category</option>
+          <option value="housing">Housing</option>
+          <option value="transportation">Transportation</option>
+          <option value="food">Food</option>
+          <option value="debt-payments">Debt Payments</option>
+        </select>
+        <button type="submit">Add Expense</button>
+      </form>
+      
+    </div>
+  </div>
   </body>
 </html>

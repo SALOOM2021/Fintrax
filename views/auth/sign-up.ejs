@@ -3,24 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/stylesheets/sign-up.css" />
   <title>Sign Up</title>
 </head>
 <body>
   <%- include('../partials/_navbar.ejs') %>
-  <h1>Create a new account!</h1>
-  <form action="/auth/sign-up" method="POST">
-    <label for="username">Username:</label>
-    <input type="text" name="username" id="username" required />
-    <label for="password">Password:</label>
-    <input type="password" name="password" id="password" required />
-    <label for="confirmPassword">Confirm Password:</label>
-    <input 
-      type="password"
-      name="confirmPassword"
-      id="confirmPassword"
-      required 
-    />
-    <button type="submit">Sign up</button>
-  </form>
+  <h1 class="header">Manage Your Life By Managing Your Expenses  </h1>
+  <div class="container">
+    <div class="img-container">
+      <div class="instructions">
+        <p class="instructions-paragraph">Welcome To Fintrax,<br> Please Enter A Suitable Username and A Rememberable Passowrd</p>
+      </div>
+    </div>
+    <div class="form-container">
+      <h1 class="h1-sign-up">Sign Up</h1>
+      <form action="/auth/sign-up" method="POST">
+        
+        <input type="text" name="username" id="username" placeholder="Username" required />
+        
+        <input type="password" name="password" id="password" placeholder="Password" required />
+        
+        <input 
+          type="password"
+          name="confirmPassword"
+          id="confirmPassword"
+          placeholder="Confirm Password"
+          required 
+        />
+        <button type="submit">Sign up</button>
+      </form>
+      <p>Already have an account? <a href="/auth/sign-in"> SIGN IN</a></p>
+    </div>
+  </div>
 </body>
 </html>

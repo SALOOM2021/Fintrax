@@ -1,23 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Apps</title>
-  </head>
-  <body>
-    <%- include('../partials/_navbar.ejs') %>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/stylesheets/my-expenses.css" />
+  <title>My Expenses</title>
+</head>
+
+<body>
+  <%- include('../partials/_navbar.ejs') %>
     <h1>My Expenses</h1>
-    <ul>
-        <% expense.forEach((item)=>{ %>
-  
-        <li>
-            <a href="/users/<%= user._id %>/dashboard/my-expenses/<%=item._id%>">
-            <%= item.name %> at <%= item.amount %>
-            </a>
-        </li>
-        <% }) %>
+    <hr class="hr-header">
+
+    <div class="expenses-container">
+      <ul>
+        <% let total=0 %>
+          <% expense.forEach((item)=>{ %>
+            <li>
+              <a class="expense-detail" href="/users/<%= user._id %>/dashboard/my-expenses/<%=item._id%>">
+                <div class="each-expense-container">
+                  <span>
+                    Name: <%= item.name %>
+                  </span> <span class="item-amount">
+                    <%= item.amount %> BHD
+                  </span>
+                </div>
+              </a>
+              <% total+=item.amount%>
+            </li>
+            <% }) %>
       </ul>
-      <button><a href="/users/<%=user._id%>/dashboard/new-expense">Add an Expense</a></button>
-  </body>
+    </div>
+    <hr>
+    <div class="total-and-add-container">
+      <p class="total-paragraph">Total Expenses: <%= total %> BHD</p>
+      <a class="add-expense" href="/users/<%=user._id%>/dashboard/new-expense">Add an Expenses</a>
+    </div>
+</body>
+
 </html>

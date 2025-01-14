@@ -3,12 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Apps</title>
+    <link rel="stylesheet" href="/stylesheets/dashboard.css" />
+    <title>Dashboard</title>
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1>My Expenses</h1>
-    <h2> <a href="/users/<%=user._id%>/dashboard/new-expense">Add an Expense</a></h2>
-    <h2> <a href="/users/<%=user._id%>/dashboard/my-expenses">My Expenses</a></h2>
+    
+    <h1 class="header">Welcome Back <span><%=user.username%></span></h1>
+    <hr>
+    <div class="container"> 
+    <a class="my-expenses" href="/users/<%=user._id%>/dashboard/my-expenses">My Expenses</a>
+    <br>
+    <a class="add-expense" href="/users/<%=user._id%>/dashboard/new-expense">Add an Expense</a>
+    </div>
+
   </body>
 </html>

@@ -1,65 +1,73 @@
-<!-- views/applications/edit.ejs -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/edit.css" />
   <title>Editing <%= expense.name %></title>
 </head>
 <body>
   <%- include('../partials/_navbar.ejs') %>
-  <h1>Edit <%= expense.name %></h1>
-  <form
-    action="/users/<%= user._id %>/dashboard/my-expenses/<%= expense._id %>?_method=PUT"
-    method="POST"
-  >
-    <label for="name">Name:</label>
-    <input
-      type="text"
-      name="name"
-      id="name"
-      value="<%= expense.name %>"
-    >
-
-    <label for="description">Description:</label>
-    <textarea name="description" id="description"><%= expense.description %></textarea>
-
-    <label for="amount">Amount:</label>
-    <input
-      type="text"
-      name="amount"
-      id="amount"
-      value="<%= expense.amount %>"
-    >
-    <label for="category">Category:</label>
-    <select id="category" name="category">
-      <option
-        value="housing"
-        <%= expense.category === "housing" ? "selected" : "" %>
+  
+  <div class="container">
+    <div class="img-container">
+      <div class="instructions">
+        <p class="instructions-paragraph">Please Make Sure You Write The Correct Information And Click On Update Expense</p>
+      </div>
+    </div>
+    <div class="form-container">
+      <h1 class="h1-add-expense">Edit <%= expense.name %></h1>
+      <form
+      action="/users/<%= user._id %>/dashboard/my-expenses/<%= expense._id %>?_method=PUT"
+      method="POST">
+    
+      <label for="name">Name:</label>
+      <br>
+      <input type="text" name="name" id="name" value="<%= expense.name %>">
+      
+      <label for="description">Description:</label>
+      <textarea name="description" id="description"><%= expense.description %></textarea>
+      <br>
+      <label for="amount">Amount:</label>
+      <br>
+      <input
+        type="text"
+        name="amount"
+        id="amount"
+        value="<%= expense.amount %>"
       >
-        Housing
-      </option>
-      <option
-        value="transportation"
-        <%= expense.category === "transportation" ? "selected" : "" %>
-      >
-        Transportation
-      </option>
-      <option
-        value="food"
-        <%= expense.category === "food" ? "selected" : "" %>
-      >
-        Food
-      </option>
-      <option
-        value="debt-payments"
-        <%= expense.category === "debt-payments" ? "selected" : "" %>
-      >
-        Debt Payments
-      </option>
-    </select>
-    <button type="submit">Update Expense</button>
-  </form>
+      <br>
+      <label for="category">Category:</label>
+      <br>
+      <select id="category" name="category">
+        <option
+          value="housing"
+          <%= expense.category === "housing" ? "selected" : "" %>
+        >
+          Housing
+        </option>
+        <option
+          value="transportation"
+          <%= expense.category === "transportation" ? "selected" : "" %>
+        >
+          Transportation
+        </option>
+        <option
+          value="food"
+          <%= expense.category === "food" ? "selected" : "" %>
+        >
+          Food
+        </option>
+        <option
+          value="debt-payments"
+          <%= expense.category === "debt-payments" ? "selected" : "" %>
+        >
+          Debt Payments
+        </option>
+      </select>
+      <button type="submit">Update Expense</button>
+    </form>
+    </div>
+  </div>
 </body>
 </html>

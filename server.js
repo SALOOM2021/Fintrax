@@ -11,22 +11,21 @@ const isSignedIn = require('./middleware/is-signed-in.js');
 const passUserToView = require('./middleware/pass-user-to-view.js');
 
 const authController = require('./controllers/auth.js');
-
-// server.js
-
 const dashboardController = require('./controllers/dashboard.js');
 
 const port = process.env.PORT ? process.env.PORT : '3000';
+const path = require('path');
 
 mongoose.connect(process.env.MONGODB_URI);
-
 mongoose.connection.on('connected', () => {
   console.log(`Connected to MongoDB ${mongoose.connection.name}.`);
 });
 
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
-// app.use(morgan('dev'));
+
+
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
@@ -36,16 +35,11 @@ app.use(
 );
 
 app.use(passUserToView);
-
-// server.js
-
 app.get('/', (req, res) => {
-  // Check if the user is signed in
-  if (req.session.user) {
-    // Redirect signed-in users to their applications index
+  
+  if (req.session.user) {  
     res.redirect(`/users/${req.session.user._id}/dashboard`);
   } else {
-    // Show the homepage for users who are not signed in
     res.render('index.ejs');
   }
 });
