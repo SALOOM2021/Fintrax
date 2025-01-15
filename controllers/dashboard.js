@@ -14,9 +14,6 @@ router.get('/', async (req, res) => {
     }
   });
   
-  
- 
-
 router.get('/new-expense', async (req, res) => {
     res.render('dashboard/new-expense.ejs');
   });
